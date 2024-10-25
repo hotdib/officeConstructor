@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<form clas="form" id="route-form">
+		<div class="form__element">
+			<label for="start-office">Start office:</label>
+			<input type="text" id="start-office">
+		</div>
+
+		<div class="form__element">
+			<label for="end-office">End office:</label>
+			<input type="text" id="end-office">
+		</div>
+		
+	
+		<div class="form__element">
+			<button id="routeButton">Make a route</button>
+			<button id="routeButtonInputClean">Clean input</button>
+			<button id="routeButtonDelete">Delete a route</button>
+		</div>
+	
+	</form>
+
+	<ul id="map_container">
+		<canvas id="myCanvas">
+			Your browser does not support the HTML canvas tag.</canvas>
+		<li style="top: 738px; left: 842px;">1</li>
+		<li style="top: 619px; left: 969px;">2</li>
+		<li style="top: 467px; left: 1082px;">4</li>
+		<li style="top: 314px; left: 1104px;">6</li>
+		<li style="top: 287px; left: 853px;">10</li>
+		<li style="top: 221px; left: 721px;">12</li>
+		<li style="top: 309px; left: 610px;">13</li>
+		<li style="top: 624px; left: 724px;">20</li>
+		<li style="top: 230px; left: 995px;">9</li>
+		<li style="top: 466px; left: 631px;">15</li>
+	</ul>
+	<div class="popup" id="popup">
+		<input type="text" id="inputPopup">
+		<button id="buttonAdd">Add office</button>
+		<button class="popupClose" id="popupClose">X</button>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
