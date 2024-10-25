@@ -210,10 +210,13 @@ function makeRoute(){
                 ctx.beginPath(); // Начинаем новый путь
                 ctx.moveTo(startCoords.x, startCoords.y); // Начальная точка
             };
-            while (position < endOfficeValue) {
-                setTimeout(() => {
-                    console.log("Delayed for 2 second.");
-                }, 2000);
+
+            if (moreless == true) {
+                console.log("moreless = true");
+                // Ваша логика для случая, когда moreless истинно
+                
+                while (position < endOfficeValue) {
+                
                 console.log("Позиция до", position);
                 position += 1;
                 console.log("позиция после", position);
@@ -232,16 +235,41 @@ function makeRoute(){
                     //     position += 1;
                     // }
                 });
-            }
-
-
-            if (moreless) {
-                console.log("moreless = true");
-                // Ваша логика для случая, когда moreless истинно
+                }
+                
             } else {
                 console.log("moreless = false");
                 // Ваша логика для случая, когда moreless ложно
+
+
+                while (position > endOfficeValue) {
+                
+                console.log("Позиция до", position);
+                position -= 1;
+                console.log("позиция после", position);
+                waypoints.forEach((li) => {
+                    if(li.textContent == position){
+                        const computedStyle = getComputedStyle(li);
+                        let posX = parseInt(computedStyle.left);
+                        let posY = parseInt(computedStyle.top);
+                        endCoords = { x: posX, y: posY }; // Сохраняем координаты конечного офиса
+                        ctx.lineTo(endCoords.x, endCoords.y); // Конечная точка
+                        
+                        ctx.stroke(); // Рисуем линию
+                        // startCoords = endCoords; // Сохраняем координаты этой точки
+                    } 
+                    // else{
+                    //     position -= 1;
+                    // }
+                });
             }
+             }
+
+            
+            
+
+
+            
         } 
         else if (position === endOfficeValue) {
             console.log("Конечный офис найден:", position);
@@ -249,14 +277,6 @@ function makeRoute(){
 
             // endCoords = { x: posX, y: posY }; // Сохраняем координаты конечного офиса
 
-
-            if (moreless) {
-                console.log("moreless = true");
-                // Ваша логика для случая, когда moreless истинно
-            } else {
-                console.log("moreless = false");
-                // Ваша логика для случая, когда moreless ложно
-            }
         } 
     });
     // Теперь рисуем линию, если оба офиса найдены
