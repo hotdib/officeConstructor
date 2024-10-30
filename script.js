@@ -6,7 +6,7 @@ const popupCloseButton = document.getElementById("popupClose");
 const routeButton = document.getElementById("routeButton");
 const routeButtonInputClean = document.getElementById("routeButtonInputClean");
 const routeButtonDelete = document.getElementById("routeButtonDelete");
-
+const routeButtonReverse = document.getElementById("routeButtonReverse");
 
 
 const canvas = document.getElementById("myCanvas");
@@ -313,4 +313,12 @@ routeButtonDelete.addEventListener('click', function (event) {
         li.classList.remove("endOfficeValue");
         li.classList.remove("startOfficeValue");
     });
+});
+
+routeButtonReverse.addEventListener('click', function (event) {
+    event.preventDefault();
+    let startReverse startoffice.value;
+    let endReverse endoffice.value;
+    startoffice.value endReverse;
+    endtoffice.value = startReverse;
 });
