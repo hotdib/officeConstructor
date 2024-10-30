@@ -227,7 +227,7 @@ function makeRoute(){
                         let posY = parseInt(computedStyle.top);
                         endCoords = { x: posX, y: posY }; // Сохраняем координаты конечного офиса
                         ctx.lineTo(endCoords.x, endCoords.y); // Конечная точка
-                        
+                        ctx.setLineDash([7,2]);
                         ctx.stroke(); // Рисуем линию
                         // startCoords = endCoords; // Сохраняем координаты этой точки
                     } 
@@ -254,7 +254,7 @@ function makeRoute(){
                         let posY = parseInt(computedStyle.top);
                         endCoords = { x: posX, y: posY }; // Сохраняем координаты конечного офиса
                         ctx.lineTo(endCoords.x, endCoords.y); // Конечная точка
-                        
+                        ctx.setLineDash([7,2]);
                         ctx.stroke(); // Рисуем линию
                         // startCoords = endCoords; // Сохраняем координаты этой точки
                     } 
