@@ -317,8 +317,8 @@ routeButtonDelete.addEventListener('click', function (event) {
 
 routeButtonReverse.addEventListener('click', function (event) {
     event.preventDefault();
-    let startReverse startoffice.value;
-    let endReverse endoffice.value;
-    startoffice.value endReverse;
-    endtoffice.value = startReverse;
+    let startReverse = startOffice.value;
+    let endReverse = endOffice.value;
+    startOffice.value = endReverse;
+    endOffice.value = startReverse;
 });
